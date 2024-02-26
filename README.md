@@ -1,1 +1,3 @@
 # BubbleGame
+Bubble Game...
+Bubble Game is a simple browser-based game where players click on randomly generated bubbles to score points. The game features a timer that counts down from 30 seconds, and players must click on bubbles that match a randomly generated target value to earn points. When the timer reaches zero, the game ends and the final score is displayed. The objective is to achieve the highest score possible within the time limit.
