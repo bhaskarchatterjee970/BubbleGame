@@ -2,16 +2,27 @@ function creatBubble() {
   let bubbleCount = " ";
 
   for (let i = 0; i < 168; i++) {
-    bubbleCount += `<div class="bubble">${Math.floor(Math.random()*10)}</div>`;
-  }
+    let randomColor = getRandomColor(); // Generate a random color for each bubble
+    let randomNumber = Math.floor(Math.random() * 10);
+    bubbleCount += `<div class="bubble" style="background-color: ${randomColor};">${randomNumber}</div>`;
+}
   let bubbles = document.querySelector(".pbtm");
   bubbles.innerHTML = bubbleCount;
+  
+}
+function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
 creatBubble()
 
 
 function setTimer(){
-    let timer=30;
+    let timer=60;
 let interval=setInterval(function(){
     if(timer>0){
         timer--;
@@ -19,12 +30,24 @@ let interval=setInterval(function(){
     }   
     else{
         clearInterval(interval);
-        document.querySelector(".pbtm").innerHTML=`<h1>GAME OVER</h1>`
+        document.querySelector(".pbtm").innerHTML=`<h1 style="color:white;font-size:60px">GAME OVER  </h1>` 
     }
 },1000)
 }
 setTimer()
 
+
+function startGame() {
+    score = 0;
+    timer = 60;
+    document.querySelector("#score").innerText = score;
+    document.querySelector("#timer").innerText = timer;
+    document.querySelector("#startButton").style.display = "none";
+    document.querySelector("#finalMessage").style.display = "none";
+    creatBubble();
+    setTimer();
+    hitVal = changeHit();
+}
 
 function changeHit(){
     let hit=parseInt(Math.random()*10)
@@ -46,4 +69,4 @@ function incrementScore(){
         // incrementScore();
     })
 }
-incrementScore();
+const result = incrementScore();
