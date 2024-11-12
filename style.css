@@ -15,15 +15,15 @@ html,body{
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color:rgb(166, 218, 166);
+    background-color:rgba(29, 48, 135, 0.784);
 }
 
 #pannel{
     overflow: hidden;
     height: 80%;
     width:85%;
-    border-radius: 10px;
-    background-color: #fff;
+    border-radius: 14px;
+    background-color: #111c26;
 }
 
 #ptop{
@@ -33,7 +33,7 @@ html,body{
     align-items: center;
     width:100%;
     height:80px;
-    background-color: rgb(87, 0, 0);
+    background-color: rgb(212, 208, 208);
 }
 
 .box{
@@ -50,7 +50,7 @@ html,body{
 .box h4{
     font-weight: 50px;
     font-size: 25px;
-    color:white;
+    color:rgb(44, 41, 41);
     padding:10px
 }
 
@@ -83,7 +83,6 @@ html,body{
 }
 
 .bubble{
-   
     color:white;
     font-size: 20px;
     display: flex;
@@ -91,11 +90,12 @@ html,body{
     align-items: center;  
     height:45px;
     width:45px;
-    background-color:rgb(4, 85, 45);
+    /* background-color:rgb(209, 39, 39); */
     border-radius: 50%;
 }
 
 .bubble:hover{
-    background-color:rgb(72, 194, 99);
+    /* background-color:rgb(72, 194, 99); */
     cursor:pointer;
 }
+
